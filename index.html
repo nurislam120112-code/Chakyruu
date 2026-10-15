@@ -1,735 +1,507 @@
 
-
 <!DOCTYPE html>
-
 <html lang="ky">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Абдуллахтын сүннөт тою</title>
 
-<title>Абдуллах — Сүннөт тойго чакыруу</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Marck+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Marck+Script&display=swap" rel="stylesheet">
 
 <style>
-
 * {
-
   margin: 0;
-
   padding: 0;
-
   box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-
   font-family: 'Montserrat', sans-serif;
-
-  background: #e9f5ff;
-
-  color: #173c64;
-
+  background: #cce7ff;
+  color: #103c78;
   text-align: center;
-
-  overflow-x: hidden;
-
 }
 
 .page {
-
-  position: relative;
-
-  max-width: 480px;
-
-  margin: auto;
-
+  max-width: 520px;
   min-height: 100vh;
-
-  padding: 28px 20px 45px;
-
+  margin: auto;
+  padding: 25px 18px 45px;
+  position: relative;
   overflow: hidden;
-
   background: linear-gradient(
-
     180deg,
-
-    #d8efff 0%,
-
-    #ffffff 30%,
-
-    #e5f5ff 65%,
-
-    #d1e9ff 100%
-
+    #b1dcff 0%,
+    #eaf6ff 18%,
+    #ffffff 43%,
+    #e9f6ff 75%,
+    #b9dfff 100%
   );
-
-  box-shadow: 0 0 35px #aacde7;
-
+  border-left: 4px solid #d8ad57;
+  border-right: 4px solid #d8ad57;
+  box-shadow: 0 0 30px #184b8730;
 }
 
 .content {
-
   position: relative;
-
   z-index: 2;
-
-}
-
-.ornament {
-
-  font-size: 28px;
-
-  color: #c49b49;
-
-  letter-spacing: 8px;
-
-  margin: 15px 0;
-
 }
 
 .music-btn {
-
-  display: inline-block;
-
-  background: linear-gradient(135deg,#174f86,#398bd0);
-
+  background: linear-gradient(135deg,#063b83,#1764b1);
   color: white;
-
-  border: 1px solid #d6b46a;
-
-  border-radius: 50px;
-
-  padding: 12px 23px;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
+  border: 2px solid #e5bd69;
+  border-radius: 40px;
+  padding: 15px 24px;
+  font-size: 17px;
+  font-weight: 800;
   cursor: pointer;
-
-  box-shadow: 0 5px 18px #174f8640;
-
-  margin-bottom: 30px;
-
+  margin: 15px 0 25px;
+  box-shadow: 0 5px 18px #00387844;
 }
 
-.small-title {
-
-  font-size: 14px;
-
-  letter-spacing: 3px;
-
-  font-weight: 700;
-
-  color: #235783;
-
-  margin-bottom: 14px;
-
+.ornament {
+  color: #c99b45;
+  font-size: 30px;
+  letter-spacing: 7px;
+  margin: 18px 0;
 }
 
-.name {
-
-  font-family: 'Marck Script', cursive;
-
-  font-size: clamp(54px, 15vw, 76px);
-
-  color: #174e86;
-
-  line-height: 1.2;
-
-  text-shadow: 1px 2px 0 #ffffff;
-
+.top-title {
+  font-size: clamp(31px, 8vw, 44px);
+  line-height: 1.3;
+  font-weight: 900;
+  color: #073c80;
+  text-shadow: 1px 2px white;
+  margin: 20px 0;
 }
 
-.subtitle {
-
-  font-family: 'Marck Script', cursive;
-
-  font-size: 34px;
-
-  color: #bc9144;
-
-  margin: 5px 0 20px;
-
+.gold-line {
+  height: 3px;
+  width: 80%;
+  margin: 25px auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d8a749,
+    transparent
+  );
 }
 
 .photo-frame {
-
-  margin: 22px auto;
-
   width: 100%;
-
-  max-width: 320px;
-
-  padding: 8px;
-
-  border: 3px solid #d3b16c;
-
-  border-radius: 180px 180px 25px 25px;
-
+  max-width: 350px;
+  margin: 25px auto;
+  padding: 7px;
   background: white;
-
-  box-shadow: 0 12px 30px #23578335;
-
-  overflow: hidden;
-
+  border: 5px solid #d9ac55;
+  border-radius: 180px 180px 25px 25px;
+  box-shadow: 0 12px 30px #00387840;
 }
 
 .photo-frame img {
-
-  width: 100%;
-
   display: block;
-
+  width: 100%;
   border-radius: 170px 170px 18px 18px;
+}
 
+.card {
+  background: #ffffffed;
+  border: 2px solid #d8ac55;
+  border-radius: 26px;
+  padding: 27px 17px;
+  margin: 28px 0;
+  box-shadow: 0 8px 25px #00387820;
 }
 
 .heading {
-
   font-family: 'Marck Script', cursive;
-
-  font-size: 35px;
-
-  color: #16518a;
-
-  margin: 25px 0 14px;
-
+  font-size: clamp(36px, 9vw, 47px);
+  font-weight: 400;
+  color: #07478b;
+  margin-bottom: 20px;
 }
 
 .invite {
-
-  font-size: 15px;
-
-  line-height: 2;
-
-  font-weight: 500;
-
-  padding: 0 5px;
-
+  font-size: clamp(18px, 4.7vw, 22px);
+  line-height: 1.9;
+  font-weight: 600;
 }
 
 .invite strong {
-
-  color: #15588f;
-
+  color: #064b93;
+  font-weight: 900;
 }
 
 .poem {
-
-  margin: 30px auto;
-
-  padding: 22px 10px;
-
-  border-top: 1px solid #c9a45e;
-
-  border-bottom: 1px solid #c9a45e;
-
   font-family: 'Marck Script', cursive;
-
-  font-size: 27px;
-
+  font-size: clamp(27px, 7vw, 35px);
   line-height: 1.7;
-
-  color: #1a5587;
-
-}
-
-.details {
-
-  background: #ffffffbd;
-
-  border: 2px solid #d6b56e;
-
-  border-radius: 24px;
-
-  padding: 28px 15px;
-
-  margin-top: 25px;
-
-  box-shadow: 0 10px 25px #174f861a;
-
+  color: #084b91;
+  padding: 23px 5px;
+  margin: 30px 0;
+  border-top: 2px solid #d6a44d;
+  border-bottom: 2px solid #d6a44d;
 }
 
 .details-title {
-
-  font-size: 15px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-
+  font-size: 23px;
+  font-weight: 900;
   margin-bottom: 20px;
-
 }
 
 .date-number {
-
-  font-size: 65px;
-
-  font-weight: 800;
-
-  color: #17558e;
-
-  line-height: 1.1;
-
+  font-size: 92px;
+  font-weight: 900;
+  line-height: 1;
+  color: #064588;
 }
 
 .month {
-
-  font-size: 21px;
-
-  font-weight: 700;
-
-  color: #bd9346;
-
-  margin: 8px 0;
-
+  font-size: 31px;
+  font-weight: 900;
+  color: #b88736;
+  margin: 10px 0;
 }
 
 .year {
-
-  font-size: 17px;
-
-  font-weight: 600;
-
+  font-size: 23px;
+  font-weight: 800;
 }
 
 .day {
-
-  margin-top: 8px;
-
-  font-size: 14px;
-
-}
-
-.divider {
-
-  height: 1px;
-
-  width: 65%;
-
-  background: #d6b56e;
-
-  margin: 24px auto;
-
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .info-label {
-
-  font-size: 12px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  color: #9d7939;
-
-  margin-bottom: 10px;
-
+  font-size: 19px;
+  font-weight: 900;
+  color: #ae8034;
+  margin-bottom: 12px;
 }
 
 .time {
-
-  font-size: 39px;
-
-  font-weight: 800;
-
-  color: #17558e;
-
+  font-size: 59px;
+  font-weight: 900;
+  color: #064588;
 }
 
 .address {
-
-  font-size: 17px;
-
-  font-weight: 600;
-
-  line-height: 1.7;
-
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.6;
 }
 
 .map-btn {
-
   display: inline-block;
-
-  margin-top: 18px;
-
-  padding: 13px 25px;
-
-  border-radius: 40px;
-
-  background: #19578f;
-
+  margin-top: 22px;
+  padding: 15px 25px;
+  background: #064b94;
   color: white;
-
+  border: 2px solid #d9ad56;
+  border-radius: 40px;
+  font-size: 17px;
+  font-weight: 800;
   text-decoration: none;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
 }
 
 .closing {
-
   font-family: 'Marck Script', cursive;
-
-  font-size: 28px;
-
+  font-size: clamp(30px, 7.5vw, 39px);
   line-height: 1.6;
-
-  margin: 35px 0 15px;
-
-  color: #17558e;
-
+  margin: 35px 0 25px;
 }
 
 .footer {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.6;
+  margin: 25px 0;
+}
 
-  font-size: 13px;
+.hosts-label {
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 35px;
+}
 
-  line-height: 1.8;
+.hosts {
+  font-family: 'Marck Script', cursive;
+  font-size: clamp(43px, 11vw, 57px);
+  color: #064589;
+  margin: 12px 0 25px;
+}
 
-  font-weight: 600;
+.money-prank {
+  margin: 40px auto 15px;
+  padding: 28px 15px;
+  border: 3px dashed #d6a64f;
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    #e9fbe7,
+    #fff7d6
+  );
+  box-shadow: 0 8px 25px #00387822;
+}
 
-  margin: 20px 0;
+.money-picture {
+  font-size: 75px;
+  margin: 15px 0;
+  animation: moneyFloat 2s ease-in-out infinite;
+}
 
+.money-title {
+  font-size: clamp(28px, 7vw, 38px);
+  font-weight: 900;
+  line-height: 1.4;
+  color: #176a30;
+}
+
+@keyframes moneyFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
 }
 
 .star {
-
   position: absolute;
-
-  color: #d3a94c;
-
-  animation: twinkle 3s infinite alternate;
-
+  color: #d4a64c;
   pointer-events: none;
-
+  animation: twinkle 3s infinite alternate;
 }
 
-.s1 { top: 115px; left: 7%; font-size: 24px; }
-
-.s2 { top: 230px; right: 7%; font-size: 19px; animation-delay: 1s; }
-
-.s3 { top: 570px; left: 5%; font-size: 16px; animation-delay: 2s; }
-
-.s4 { top: 830px; right: 6%; font-size: 22px; }
+.s1 { top: 150px; left: 7%; font-size: 24px; }
+.s2 { top: 300px; right: 6%; font-size: 25px; }
+.s3 { top: 800px; left: 5%; font-size: 20px; }
+.s4 { top: 1300px; right: 5%; font-size: 25px; }
 
 @keyframes twinkle {
-
-  0% { opacity: .25; transform: scale(.7); }
-
-  100% { opacity: 1; transform: scale(1.2); }
-
-}
-
-.cloud {
-
-  position: absolute;
-
-  font-size: 55px;
-
-  opacity: .16;
-
-  animation: float 7s ease-in-out infinite;
-
-  pointer-events: none;
-
-}
-
-.c1 { top: 140px; left: -20px; }
-
-.c2 { top: 440px; right: -20px; animation-delay: 2s; }
-
-@keyframes float {
-
-  0%, 100% { transform: translateY(0); }
-
-  50% { transform: translateY(-18px); }
-
+  from {
+    opacity: .3;
+    transform: scale(.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 .reveal {
-
   opacity: 0;
-
-  transform: translateY(24px);
-
+  transform: translateY(25px);
   transition: opacity 1s, transform 1s;
-
 }
 
 .reveal.visible {
-
   opacity: 1;
-
   transform: translateY(0);
-
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *, *::before, *::after {
-
     animation: none !important;
-
     transition: none !important;
-
   }
 
   .reveal {
-
     opacity: 1;
-
     transform: none;
-
   }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
 <div class="page">
 
-  <div class="star s1">✦</div>
+  <span class="star s1">✦</span>
+  <span class="star s2">✧</span>
+  <span class="star s3">✦</span>
+  <span class="star s4">✧</span>
 
-  <div class="star s2">✧</div>
+  <main class="content">
 
-  <div class="star s3">✦</div>
-
-  <div class="star s4">✧</div>
-
-  <div class="cloud c1">☁</div>
-
-  <div class="cloud c2">☁</div>
-
-  <div class="content">
-
-    <button class="music-btn" id="musicBtn"
-
+    <button
+      class="music-btn"
+      id="musicBtn"
       onclick="toggleMusic()">
-
       ♫ Музыканы күйгүзүү
-
     </button>
 
     <audio id="music" loop preload="none">
-
       <source src="music.mp3.m4a" type="audio/mp4">
-
     </audio>
 
     <div class="ornament">✦ ❖ ✦</div>
 
-    <div class="small-title">
+    <h1 class="top-title">
+      АБДУЛЛАХТЫН<br>
+      СҮННӨТ ТОЮ
+    </h1>
 
-      СҮННӨТ ТОЙГО ЧАКЫРУУ
-
-    </div>
-
-    <h1 class="name">Абдуллах</h1>
-
-    <div class="subtitle">Сүннөт тою</div>
-
-    <div class="ornament">✧ ✦ ✧</div>
+    <div class="gold-line"></div>
 
     <div class="photo-frame reveal">
-
-      <img src="surot.jpg.PNG"
-
-           alt="Абдуллахтын сүннөт тоюна сүрөт">
-
+      <img
+        src="surot.jpg.PNG"
+        alt="Абдуллахтын сүннөт тою">
     </div>
 
-    <h2 class="heading reveal">
+    <section class="card reveal">
 
-      Ардактуу коноктор!
+      <h2 class="heading">
+        Ардактуу коноктор!
+      </h2>
 
-    </h2>
+      <p class="invite">
+        Урматтуу коноктор!
+        Сиздерди уулубуз
+        <strong>Абдуллахтын сүннөт тоюна</strong>
+        арналган ак дасторконубуздун
+        кадырлуу коногу болуп,
+        ак батаңызды берип,
+        кубанычыбызга ортоктош болуп
+        кетишиңиздерди суранып чакырабыз!
+      </p>
 
-    <p class="invite reveal">
-
-      Урматтуу коноктор!
-
-      Сиздерди уулубуз
-
-      <strong>Абдуллахтын сүннөт тоюна</strong>
-
-      арналган ак дасторконубуздун
-
-      кадырлуу коногу болуп,
-
-      ак батаңызды берип,
-
-      кубанычыбызга ортоктош болуп
-
-      кетишиңиздерди суранып чакырабыз!
-
-    </p>
+    </section>
 
     <div class="poem reveal">
-
       Ак дасторкон жайылсын,<br>
-
       Ак тилектер айтылсын.<br>
-
       Абдуллахка бак тилеп,<br>
-
       Ак баталар арналсын!
-
     </div>
 
     <div class="ornament">✦ ❖ ✦</div>
 
-    <section class="details reveal">
+    <section class="card reveal">
 
-      <div class="details-title">
-
+      <h2 class="details-title">
         ТОЙ БОЛУУЧУ КҮН
-
-      </div>
+      </h2>
 
       <div class="date-number">24</div>
-
       <div class="month">ОКТЯБРЬ</div>
-
       <div class="year">2026-ЖЫЛ</div>
-
       <div class="day">Ишемби күнү</div>
 
-      <div class="divider"></div>
+      <div class="gold-line"></div>
 
-      <div class="info-label">БАШТАЛЫШЫ</div>
+      <div class="info-label">
+        БАШТАЛЫШЫ
+      </div>
 
       <div class="time">12:00</div>
 
-      <div class="divider"></div>
+      <div class="gold-line"></div>
 
-      <div class="info-label">ДАРЕГИБИЗ</div>
-
-      <div class="address">
-
-        Боргемиков Туйба көчөсү, 65а
-
+      <div class="info-label">
+        ДАРЕГИБИЗ
       </div>
 
-      <a class="map-btn"
+      <div class="address">
+        Боргемиков Туйба көчөсү, 65а
+      </div>
 
-         href="https://www.google.com/maps/search/?api=1&query=Боргемиков+Туйба+көчөсү+65а"
-
-         target="_blank"
-
-         rel="noopener noreferrer">
-
+      <a
+        class="map-btn"
+        href="https://www.google.com/maps/search/?api=1&amp;query=Боргемиков+Туйба+көчөсү+65а"
+        target="_blank"
+        rel="noopener noreferrer">
         📍 Картадан көрүү
-
       </a>
 
     </section>
 
     <div class="closing reveal">
-
       Сиздердин келишиңиздер
-
       биздин кубанычыбызды арттырып,
-
       майрамыбызга өзгөчө көрк берет!
-
     </div>
 
     <div class="footer reveal">
-
       Сиздерди чыдамсыздык менен күтөбүз!
-
     </div>
 
-    <div class="closing reveal">
+    <div class="gold-line"></div>
 
-      Жакшылыкта жолугушканча!
+    <div class="hosts-label reveal">
+      Урматтоо менен, той ээлери:
+    </div>
 
+    <div class="hosts reveal">
+      Казыбек &amp; Аселя
     </div>
 
     <div class="ornament">✦ ❖ ✦</div>
 
-  </div>
+    <!-- Эң аягындагы жазуу -->
+    <div class="money-prank reveal">
+      <div class="money-picture">
+        💸💵💰
+      </div>
 
+      <h2 class="money-title">
+        Акчаны унутпагыла!
+      </h2>
+    </div>
+
+  </main>
 </div>
 
 <script>
-
 const music = document.getElementById("music");
-
 const musicBtn = document.getElementById("musicBtn");
 
 async function toggleMusic() {
-
   if (music.paused) {
-
     try {
-
       await music.play();
-
       musicBtn.textContent = "♫ Музыканы токтотуу";
-
     } catch (error) {
-
       musicBtn.textContent = "♫ Музыканы күйгүзүү";
-
       alert("Музыка ачылган жок. Файлдын атын текшериңиз.");
-
     }
-
   } else {
-
     music.pause();
-
     musicBtn.textContent = "♫ Музыканы күйгүзүү";
-
   }
-
 }
 
-const observer = new IntersectionObserver(
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-  (entries) => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add("visible");
-
-        observer.unobserve(entry.target);
-
-      }
-
-    });
-
-  },
-
-  { threshold: 0.1 }
-
-);
-
-document.querySelectorAll(".reveal").forEach(el => {
-
-  observer.observe(el);
-
-});
-
+  document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
+  });
+} else {
+  document.querySelectorAll(".reveal").forEach(el => {
+    el.classList.add("visible");
+  });
+}
 </script>
 
 </body>
-
 </html>
