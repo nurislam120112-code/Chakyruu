@@ -4,9 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Абдуллахтын сүннөт тою</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Marck+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -20,9 +21,9 @@ html {
 }
 
 body {
+  background: #c9e5ff;
   font-family: 'Montserrat', sans-serif;
-  background: #cce7ff;
-  color: #103c78;
+  color: #103b73;
   text-align: center;
 }
 
@@ -30,20 +31,20 @@ body {
   max-width: 520px;
   min-height: 100vh;
   margin: auto;
-  padding: 25px 18px 45px;
+  padding: 28px 18px 55px;
   position: relative;
   overflow: hidden;
   background: linear-gradient(
     180deg,
-    #b1dcff 0%,
-    #eaf6ff 18%,
-    #ffffff 43%,
-    #e9f6ff 75%,
+    #b6dfff 0%,
+    #eef8ff 25%,
+    #ffffff 50%,
+    #eaf6ff 78%,
     #b9dfff 100%
   );
-  border-left: 4px solid #d8ad57;
-  border-right: 4px solid #d8ad57;
-  box-shadow: 0 0 30px #184b8730;
+  border-left: 4px solid #d8ac54;
+  border-right: 4px solid #d8ac54;
+  box-shadow: 0 0 30px #15477b33;
 }
 
 .content {
@@ -51,56 +52,76 @@ body {
   z-index: 2;
 }
 
+.script {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+}
+
+.intro-title {
+  font-size: clamp(34px, 8vw, 46px);
+  font-weight: 900;
+  color: #073f82;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  margin: 18px 0 25px;
+}
+
 .music-btn {
-  background: linear-gradient(135deg,#063b83,#1764b1);
+  display: inline-block;
+  background: linear-gradient(135deg,#073c80,#1768b4);
+  border: 2px solid #e3b65d;
+  border-radius: 50px;
   color: white;
-  border: 2px solid #e5bd69;
-  border-radius: 40px;
   padding: 15px 24px;
   font-size: 17px;
   font-weight: 800;
   cursor: pointer;
-  margin: 15px 0 25px;
-  box-shadow: 0 5px 18px #00387844;
+  margin: 0 0 25px;
+  box-shadow: 0 6px 18px #073c8040;
 }
 
 .ornament {
-  color: #c99b45;
-  font-size: 30px;
+  color: #c79a47;
+  font-size: 29px;
   letter-spacing: 7px;
-  margin: 18px 0;
-}
-
-.top-title {
-  font-size: clamp(31px, 8vw, 44px);
-  line-height: 1.3;
-  font-weight: 900;
-  color: #073c80;
-  text-shadow: 1px 2px white;
   margin: 20px 0;
 }
 
 .gold-line {
-  height: 3px;
+  height: 2px;
   width: 80%;
   margin: 25px auto;
   background: linear-gradient(
     90deg,
     transparent,
-    #d8a749,
+    #d6a54b,
     transparent
   );
+}
+
+.main-title {
+  font-size: clamp(45px, 11vw, 65px);
+  line-height: 1.3;
+  color: #084888;
+  margin: 20px 0;
+  overflow-wrap: anywhere;
+}
+
+.main-subtitle {
+  font-size: clamp(39px, 10vw, 54px);
+  color: #b48739;
+  margin: 0 0 20px;
 }
 
 .photo-frame {
   width: 100%;
   max-width: 350px;
-  margin: 25px auto;
+  margin: 28px auto;
   padding: 7px;
   background: white;
-  border: 5px solid #d9ac55;
+  border: 5px solid #d8aa53;
   border-radius: 180px 180px 25px 25px;
-  box-shadow: 0 12px 30px #00387840;
+  box-shadow: 0 12px 30px #00387835;
 }
 
 .photo-frame img {
@@ -111,25 +132,24 @@ body {
 
 .card {
   background: #ffffffed;
-  border: 2px solid #d8ac55;
+  border: 2px solid #d7ac58;
   border-radius: 26px;
-  padding: 27px 17px;
-  margin: 28px 0;
+  padding: 28px 17px;
+  margin: 30px 0;
   box-shadow: 0 8px 25px #00387820;
 }
 
 .heading {
-  font-family: 'Marck Script', cursive;
-  font-size: clamp(36px, 9vw, 47px);
-  font-weight: 400;
+  font-size: clamp(38px, 9vw, 53px);
   color: #07478b;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  line-height: 1.3;
 }
 
 .invite {
   font-size: clamp(18px, 4.7vw, 22px);
-  line-height: 1.9;
   font-weight: 600;
+  line-height: 1.9;
 }
 
 .invite strong {
@@ -138,24 +158,25 @@ body {
 }
 
 .poem {
-  font-family: 'Marck Script', cursive;
-  font-size: clamp(27px, 7vw, 35px);
-  line-height: 1.7;
+  font-size: clamp(21px, 5.4vw, 27px);
+  line-height: 1.9;
+  font-weight: 700;
   color: #084b91;
-  padding: 23px 5px;
+  padding: 24px 5px;
   margin: 30px 0;
   border-top: 2px solid #d6a44d;
   border-bottom: 2px solid #d6a44d;
 }
 
 .details-title {
-  font-size: 23px;
-  font-weight: 900;
+  font-size: clamp(38px, 9vw, 51px);
+  color: #07478b;
+  line-height: 1.3;
   margin-bottom: 20px;
 }
 
 .date-number {
-  font-size: 92px;
+  font-size: 90px;
   font-weight: 900;
   line-height: 1;
   color: #064588;
@@ -165,7 +186,7 @@ body {
   font-size: 31px;
   font-weight: 900;
   color: #b88736;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .year {
@@ -174,20 +195,20 @@ body {
 }
 
 .day {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 600;
   margin-top: 10px;
 }
 
 .info-label {
-  font-size: 19px;
-  font-weight: 900;
-  color: #ae8034;
+  font-size: clamp(35px, 8vw, 46px);
+  color: #b18437;
   margin-bottom: 12px;
+  line-height: 1.3;
 }
 
 .time {
-  font-size: 59px;
+  font-size: 60px;
   font-weight: 900;
   color: #064588;
 }
@@ -211,67 +232,17 @@ body {
   text-decoration: none;
 }
 
-.footer {
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 1.6;
-  margin: 30px 0;
-}
-
 .hosts-label {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 700;
   margin-top: 35px;
 }
 
 .hosts {
-  font-family: 'Marck Script', cursive;
-  font-size: clamp(43px, 11vw, 57px);
+  font-size: clamp(44px, 11vw, 61px);
   color: #064589;
-  margin: 12px 0 25px;
-}
-
-.money-prank {
-  margin: 40px auto 15px;
-  padding: 28px 15px;
-  border: 3px dashed #d6a64f;
-  border-radius: 26px;
-  background: linear-gradient(
-    135deg,
-    #e9fbe7,
-    #fff7d6
-  );
-  box-shadow: 0 8px 25px #00387822;
-}
-
-.money-picture {
-  font-size: 75px;
-  margin: 15px 0;
-  animation: moneyFloat 2s ease-in-out infinite;
-}
-
-.money-title {
-  font-size: clamp(28px, 7vw, 38px);
-  font-weight: 900;
+  margin: 20px 0 25px;
   line-height: 1.4;
-  color: #176a30;
-}
-
-.money-text {
-  font-size: 22px;
-  font-weight: 800;
-  color: #176a30;
-  line-height: 1.6;
-  margin-top: 15px;
-}
-
-@keyframes moneyFloat {
-  0%, 100% {
-    transform: translateY(0) rotate(-5deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(5deg);
-  }
 }
 
 .star {
@@ -281,10 +252,10 @@ body {
   animation: twinkle 3s infinite alternate;
 }
 
-.s1 { top: 150px; left: 7%; font-size: 24px; }
-.s2 { top: 300px; right: 6%; font-size: 25px; }
-.s3 { top: 800px; left: 5%; font-size: 20px; }
-.s4 { top: 1300px; right: 5%; font-size: 25px; }
+.s1 { top: 150px; left: 6%; font-size: 23px; }
+.s2 { top: 320px; right: 6%; font-size: 25px; }
+.s3 { top: 850px; left: 5%; font-size: 20px; }
+.s4 { top: 1400px; right: 5%; font-size: 24px; }
 
 @keyframes twinkle {
   from {
@@ -333,6 +304,10 @@ body {
 
   <main class="content">
 
+    <h1 class="intro-title">
+      СҮННӨТ ТОЙГО ЧАКЫРУУ
+    </h1>
+
     <button
       class="music-btn"
       id="musicBtn"
@@ -346,10 +321,13 @@ body {
 
     <div class="ornament">✦ ❖ ✦</div>
 
-    <h1 class="top-title">
-      АБДУЛЛАХТЫН<br>
-      СҮННӨТ ТОЮ
-    </h1>
+    <h2 class="main-title script">
+      Абдуллахтын
+    </h2>
+
+    <div class="main-subtitle script">
+      Сүннөт тою
+    </div>
 
     <div class="gold-line"></div>
 
@@ -361,12 +339,11 @@ body {
 
     <section class="card reveal">
 
-      <h2 class="heading">
-        Ардактуу коноктор!
+      <h2 class="heading script">
+        Урматтуу коноктор!
       </h2>
 
       <p class="invite">
-        Урматтуу коноктор!
         Сиздерди уулубуз
         <strong>Абдуллахтын сүннөт тоюна</strong>
         арналган ак дасторконубуздун
@@ -389,8 +366,8 @@ body {
 
     <section class="card reveal">
 
-      <h2 class="details-title">
-        ТОЙ БОЛУУЧУ КҮН
+      <h2 class="details-title script">
+        Той болуучу күн
       </h2>
 
       <div class="date-number">24</div>
@@ -400,16 +377,16 @@ body {
 
       <div class="gold-line"></div>
 
-      <div class="info-label">
-        БАШТАЛЫШЫ
+      <div class="info-label script">
+        Башталышы
       </div>
 
       <div class="time">12:00</div>
 
       <div class="gold-line"></div>
 
-      <div class="info-label">
-        ДАРЕГИБИЗ
+      <div class="info-label script">
+        Дарегибиз
       </div>
 
       <div class="address">
@@ -426,36 +403,17 @@ body {
 
     </section>
 
-    <div class="footer reveal">
-      Сиздерди чыдамсыздык менен күтөбүз!
-    </div>
-
     <div class="gold-line"></div>
 
     <div class="hosts-label reveal">
       Урматтоо менен, той ээлери:
     </div>
 
-    <div class="hosts reveal">
+    <div class="hosts script reveal">
       Казыбек &amp; Аселя
     </div>
 
     <div class="ornament">✦ ❖ ✦</div>
-
-    <div class="money-prank reveal">
-      <div class="money-picture">
-        💸💵💰
-      </div>
-
-      <h2 class="money-title">
-        Акчаны унутпагыла!
-      </h2>
-
-      <p class="money-text">
-        Көңүлдөн чыккан 5 миң сом
-        берсеңер болот! 😁
-      </p>
-    </div>
 
   </main>
 </div>
