@@ -1,450 +1,735 @@
 
+
 <!DOCTYPE html>
+
 <html lang="ky">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Абдуллахтын сүннөт тою</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Абдуллах — Сүннөт тойго чакыруу</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Marck+Script&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;
- background:#d7efff;
- color:#315e83;
- font-family:Montserrat,sans-serif;
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
 }
-.page{
- max-width:480px;
- margin:auto;
- position:relative;
- overflow:hidden;
- min-height:100vh;
- background:linear-gradient(
-  180deg,#91d1ff 0%,
-  #d8f1ff 17%,#fff 40%,
-  #e5f6ff 70%,#a9ddff 100%);
- box-shadow:0 0 35px #5294c455;
+
+body {
+
+  font-family: 'Montserrat', sans-serif;
+
+  background: #e9f5ff;
+
+  color: #173c64;
+
+  text-align: center;
+
+  overflow-x: hidden;
+
 }
-.hero{
- position:relative;
- text-align:center;
- padding:30px 18px 55px;
+
+.page {
+
+  position: relative;
+
+  max-width: 480px;
+
+  margin: auto;
+
+  min-height: 100vh;
+
+  padding: 28px 20px 45px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+
+    180deg,
+
+    #d8efff 0%,
+
+    #ffffff 30%,
+
+    #e5f5ff 65%,
+
+    #d1e9ff 100%
+
+  );
+
+  box-shadow: 0 0 35px #aacde7;
+
 }
-.music{
- position:relative;
- z-index:10;
- border:2px solid white;
- border-radius:40px;
- background:linear-gradient(135deg,#1679c1,#76c6ff);
- color:white;
- font-size:15px;
- font-weight:700;
- padding:16px 28px;
- box-shadow:0 7px 20px #4b9ac677;
- cursor:pointer;
+
+.content {
+
+  position: relative;
+
+  z-index: 2;
+
 }
-.music:active{transform:scale(.96)}
-.ornament{
- font-size:28px;
- color:#428dc3;
- letter-spacing:7px;
- margin:30px 0;
+
+.ornament {
+
+  font-size: 28px;
+
+  color: #c49b49;
+
+  letter-spacing: 8px;
+
+  margin: 15px 0;
+
 }
-.kicker{
- font-size:13px;
- letter-spacing:2px;
- font-weight:800;
- color:#367eaf;
- margin-top:35px;
+
+.music-btn {
+
+  display: inline-block;
+
+  background: linear-gradient(135deg,#174f86,#398bd0);
+
+  color: white;
+
+  border: 1px solid #d6b46a;
+
+  border-radius: 50px;
+
+  padding: 12px 23px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 18px #174f8640;
+
+  margin-bottom: 30px;
+
 }
-h1,h2,.script,.section-title,.poem{
- font-family:'Marck Script',cursive;
- font-weight:400;
+
+.small-title {
+
+  font-size: 14px;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+
+  color: #235783;
+
+  margin-bottom: 14px;
+
 }
-h1{
- font-size:clamp(48px,13vw,69px);
- margin:15px 0 0;
- color:#217cbb;
- text-shadow:3px 3px white;
+
+.name {
+
+  font-family: 'Marck Script', cursive;
+
+  font-size: clamp(54px, 15vw, 76px);
+
+  color: #174e86;
+
+  line-height: 1.2;
+
+  text-shadow: 1px 2px 0 #ffffff;
+
 }
-h2{
- font-size:48px;
- color:#529bcb;
- margin:0 0 22px;
+
+.subtitle {
+
+  font-family: 'Marck Script', cursive;
+
+  font-size: 34px;
+
+  color: #bc9144;
+
+  margin: 5px 0 20px;
+
 }
-.subtitle{
- font-family:'Marck Script',cursive;
- font-size:28px;
- line-height:1.6;
- color:#3988bc;
+
+.photo-frame {
+
+  margin: 22px auto;
+
+  width: 100%;
+
+  max-width: 320px;
+
+  padding: 8px;
+
+  border: 3px solid #d3b16c;
+
+  border-radius: 180px 180px 25px 25px;
+
+  background: white;
+
+  box-shadow: 0 12px 30px #23578335;
+
+  overflow: hidden;
+
 }
-.photo-frame{
- width:93%;
- padding:7px;
- margin:28px auto;
- border-radius:170px 170px 30px 30px;
- background:linear-gradient(135deg,#fff,#6bb8eb,#fff);
- box-shadow:0 12px 32px #5397c577;
- animation:float 5s ease-in-out infinite;
+
+.photo-frame img {
+
+  width: 100%;
+
+  display: block;
+
+  border-radius: 170px 170px 18px 18px;
+
 }
-.photo-frame img{
- display:block;
- width:100%;
- height:365px;
- object-fit:cover;
- border-radius:165px 165px 24px 24px;
+
+.heading {
+
+  font-family: 'Marck Script', cursive;
+
+  font-size: 35px;
+
+  color: #16518a;
+
+  margin: 25px 0 14px;
+
 }
-@keyframes float{
- 50%{transform:translateY(-8px)}
+
+.invite {
+
+  font-size: 15px;
+
+  line-height: 2;
+
+  font-weight: 500;
+
+  padding: 0 5px;
+
 }
-.star{
- position:absolute;
- color:white;
- text-shadow:0 0 14px #168bd5;
- animation:shine 3s infinite alternate;
- pointer-events:none;
+
+.invite strong {
+
+  color: #15588f;
+
 }
-.s1{top:125px;left:7%;font-size:30px}
-.s2{top:190px;right:8%;font-size:25px;animation-delay:1s}
-.s3{top:390px;left:5%;font-size:24px;animation-delay:2s}
-.s4{top:650px;right:7%;font-size:30px;animation-delay:1.5s}
-@keyframes shine{
- from{opacity:.2;transform:scale(.6)}
- to{opacity:1;transform:scale(1.3)}
+
+.poem {
+
+  margin: 30px auto;
+
+  padding: 22px 10px;
+
+  border-top: 1px solid #c9a45e;
+
+  border-bottom: 1px solid #c9a45e;
+
+  font-family: 'Marck Script', cursive;
+
+  font-size: 27px;
+
+  line-height: 1.7;
+
+  color: #1a5587;
+
 }
-.cloud{
- position:absolute;
- font-size:55px;
- opacity:.7;
- pointer-events:none;
- animation:float 6s ease-in-out infinite;
+
+.details {
+
+  background: #ffffffbd;
+
+  border: 2px solid #d6b56e;
+
+  border-radius: 24px;
+
+  padding: 28px 15px;
+
+  margin-top: 25px;
+
+  box-shadow: 0 10px 25px #174f861a;
+
 }
-.c1{top:150px;left:-18px}
-.c2{top:300px;right:-20px;animation-delay:2s}
-.section{
- position:relative;
- padding:45px 25px;
- text-align:center;
+
+.details-title {
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 20px;
+
 }
-.section-title{
- font-size:43px;
- color:#3987bc;
- margin:0 0 25px;
+
+.date-number {
+
+  font-size: 65px;
+
+  font-weight: 800;
+
+  color: #17558e;
+
+  line-height: 1.1;
+
 }
-.card{
- background:#ffffffc9;
- border:2px solid white;
- border-radius:28px;
- padding:28px 21px;
- box-shadow:0 9px 30px #91c6e544;
+
+.month {
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  color: #bd9346;
+
+  margin: 8px 0;
+
 }
-.message{
- font-size:15px;
- line-height:2.1;
+
+.year {
+
+  font-size: 17px;
+
+  font-weight: 600;
+
 }
-.poem{
- font-size:28px;
- line-height:1.8;
- color:#488dbb;
+
+.day {
+
+  margin-top: 8px;
+
+  font-size: 14px;
+
 }
-.divider{
- text-align:center;
- color:#61a9d7;
- font-size:25px;
- margin:15px 0;
+
+.divider {
+
+  height: 1px;
+
+  width: 65%;
+
+  background: #d6b56e;
+
+  margin: 24px auto;
+
 }
-.details{
- background:#ffffffd9;
- border:3px double #75b9e4;
- border-radius:30px;
- padding:32px 18px;
- box-shadow:0 10px 30px #8abfe055;
+
+.info-label {
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #9d7939;
+
+  margin-bottom: 10px;
+
 }
-.label{
- font-size:12px;
- font-weight:800;
- letter-spacing:2px;
+
+.time {
+
+  font-size: 39px;
+
+  font-weight: 800;
+
+  color: #17558e;
+
 }
-.date{
- font-size:37px;
- font-weight:800;
- color:#2785c3;
- margin:15px 0;
+
+.address {
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
 }
-.time{
- font-size:39px;
- font-weight:800;
- color:#328bc7;
+
+.map-btn {
+
+  display: inline-block;
+
+  margin-top: 18px;
+
+  padding: 13px 25px;
+
+  border-radius: 40px;
+
+  background: #19578f;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
 }
-.address{
- font-size:17px;
- font-weight:700;
- line-height:1.8;
+
+.closing {
+
+  font-family: 'Marck Script', cursive;
+
+  font-size: 28px;
+
+  line-height: 1.6;
+
+  margin: 35px 0 15px;
+
+  color: #17558e;
+
 }
-.line{
- height:1px;
- width:75%;
- margin:30px auto;
- background:linear-gradient(90deg,transparent,#8dc3e7,transparent);
+
+.footer {
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  font-weight: 600;
+
+  margin: 20px 0;
+
 }
-.events{
- display:grid;
- gap:16px;
- margin-top:25px;
+
+.star {
+
+  position: absolute;
+
+  color: #d3a94c;
+
+  animation: twinkle 3s infinite alternate;
+
+  pointer-events: none;
+
 }
-.event{
- text-align:left;
- background:#ffffffc9;
- padding:20px;
- border-radius:20px;
- border-left:5px solid #67b4e8;
+
+.s1 { top: 115px; left: 7%; font-size: 24px; }
+
+.s2 { top: 230px; right: 7%; font-size: 19px; animation-delay: 1s; }
+
+.s3 { top: 570px; left: 5%; font-size: 16px; animation-delay: 2s; }
+
+.s4 { top: 830px; right: 6%; font-size: 22px; }
+
+@keyframes twinkle {
+
+  0% { opacity: .25; transform: scale(.7); }
+
+  100% { opacity: 1; transform: scale(1.2); }
+
 }
-.event b{color:#3489c1}
-.event p{
- font-size:13px;
- line-height:1.8;
+
+.cloud {
+
+  position: absolute;
+
+  font-size: 55px;
+
+  opacity: .16;
+
+  animation: float 7s ease-in-out infinite;
+
+  pointer-events: none;
+
 }
-.footer{
- padding:50px 25px 80px;
- text-align:center;
- background:linear-gradient(transparent,#b0dfff);
+
+.c1 { top: 140px; left: -20px; }
+
+.c2 { top: 440px; right: -20px; animation-delay: 2s; }
+
+@keyframes float {
+
+  0%, 100% { transform: translateY(0); }
+
+  50% { transform: translateY(-18px); }
+
 }
-.footer h2{font-size:52px}
-.reveal{
- opacity:0;
- transform:translateY(30px);
- transition:all .8s ease;
+
+.reveal {
+
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  transition: opacity 1s, transform 1s;
+
 }
-.reveal.show{
- opacity:1;
- transform:translateY(0);
+
+.reveal.visible {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
 }
-@media(prefers-reduced-motion:reduce){
- *,*::before,*::after{
-  animation:none!important;
-  transition:none!important;
- }
- .reveal{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *, *::before, *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+  .reveal {
+
+    opacity: 1;
+
+    transform: none;
+
+  }
+
 }
+
 </style>
+
 </head>
 
 <body>
-<main class="page">
 
-<header class="hero">
+<div class="page">
 
-<button class="music" id="musicBtn"
- onclick="toggleMusic()">
- ♫ Музыканы күйгүзүү
-</button>
+  <div class="star s1">✦</div>
 
-<audio id="music" loop preload="none">
- <source src="music.mp3.m4a" type="audio/mp4">
-</audio>
+  <div class="star s2">✧</div>
 
-<span class="star s1">✦</span>
-<span class="star s2">✧</span>
-<span class="star s3">★</span>
-<span class="star s4">✦</span>
+  <div class="star s3">✦</div>
 
-<div class="cloud c1">☁️</div>
-<div class="cloud c2">☁️</div>
+  <div class="star s4">✧</div>
 
-<div class="ornament">✦ ❖ ✦</div>
+  <div class="cloud c1">☁</div>
 
-<p class="kicker">СҮННӨТ ТОЙГО ЧАКЫРУУ</p>
+  <div class="cloud c2">☁</div>
 
-<h1>Абдуллах</h1>
-<h2>Сүннөт той</h2>
+  <div class="content">
 
-<p class="subtitle">
- Кичинекей ханзаадабыздын<br>
- чоң майрамына кош келиңиздер!
-</p>
+    <button class="music-btn" id="musicBtn"
 
-<div class="photo-frame">
- <img src="surot.jpg.PNG"
- alt="Абдуллах ат минип турган сүрөт">
+      onclick="toggleMusic()">
+
+      ♫ Музыканы күйгүзүү
+
+    </button>
+
+    <audio id="music" loop preload="none">
+
+      <source src="music.mp3.m4a" type="audio/mp4">
+
+    </audio>
+
+    <div class="ornament">✦ ❖ ✦</div>
+
+    <div class="small-title">
+
+      СҮННӨТ ТОЙГО ЧАКЫРУУ
+
+    </div>
+
+    <h1 class="name">Абдуллах</h1>
+
+    <div class="subtitle">Сүннөт тою</div>
+
+    <div class="ornament">✧ ✦ ✧</div>
+
+    <div class="photo-frame reveal">
+
+      <img src="surot.jpg.PNG"
+
+           alt="Абдуллахтын сүннөт тоюна сүрөт">
+
+    </div>
+
+    <h2 class="heading reveal">
+
+      Ардактуу коноктор!
+
+    </h2>
+
+    <p class="invite reveal">
+
+      Урматтуу коноктор!
+
+      Сиздерди уулубуз
+
+      <strong>Абдуллахтын сүннөт тоюна</strong>
+
+      арналган ак дасторконубуздун
+
+      кадырлуу коногу болуп,
+
+      ак батаңызды берип,
+
+      кубанычыбызга ортоктош болуп
+
+      кетишиңиздерди суранып чакырабыз!
+
+    </p>
+
+    <div class="poem reveal">
+
+      Ак дасторкон жайылсын,<br>
+
+      Ак тилектер айтылсын.<br>
+
+      Абдуллахка бак тилеп,<br>
+
+      Ак баталар арналсын!
+
+    </div>
+
+    <div class="ornament">✦ ❖ ✦</div>
+
+    <section class="details reveal">
+
+      <div class="details-title">
+
+        ТОЙ БОЛУУЧУ КҮН
+
+      </div>
+
+      <div class="date-number">24</div>
+
+      <div class="month">ОКТЯБРЬ</div>
+
+      <div class="year">2026-ЖЫЛ</div>
+
+      <div class="day">Ишемби күнү</div>
+
+      <div class="divider"></div>
+
+      <div class="info-label">БАШТАЛЫШЫ</div>
+
+      <div class="time">12:00</div>
+
+      <div class="divider"></div>
+
+      <div class="info-label">ДАРЕГИБИЗ</div>
+
+      <div class="address">
+
+        Боргемиков Туйба көчөсү, 65а
+
+      </div>
+
+      <a class="map-btn"
+
+         href="https://www.google.com/maps/search/?api=1&query=Боргемиков+Туйба+көчөсү+65а"
+
+         target="_blank"
+
+         rel="noopener noreferrer">
+
+        📍 Картадан көрүү
+
+      </a>
+
+    </section>
+
+    <div class="closing reveal">
+
+      Сиздердин келишиңиздер
+
+      биздин кубанычыбызды арттырып,
+
+      майрамыбызга өзгөчө көрк берет!
+
+    </div>
+
+    <div class="footer reveal">
+
+      Сиздерди чыдамсыздык менен күтөбүз!
+
+    </div>
+
+    <div class="closing reveal">
+
+      Жакшылыкта жолугушканча!
+
+    </div>
+
+    <div class="ornament">✦ ❖ ✦</div>
+
+  </div>
+
 </div>
-
-<div class="ornament">✧ ★ ✧</div>
-
-<p class="subtitle">
- Кубанычыбызга ортоктош болуңуздар!
-</p>
-
-</header>
-
-<section class="section reveal">
-<div class="card">
-
-<h3 class="section-title">Ардактуу коноктор!</h3>
-
-<div class="message">
- Ассаламу алейкум, урматтуу
- туугандар, куда-сөөк, достор,
- жакындар жана кадырлуу коноктор!
-
- <p>
- Биздин сүйүктүү уулубуз
- <b>Абдуллахтын</b>
- сүннөт тоюна арналган
- ак дасторконубузга сиздерди
- чын жүрөктөн чакырабыз.
- </p>
-
- <p>
- Бул күн биздин үй-бүлөбүз
- үчүн өзгөчө кубанычтуу майрам.
- Сиздердин ак баталарыңыздар,
- жылуу сөздөрүңүздөр жана
- жакшы тилектериңиздер
- кубанычыбызды арттырат.
- </p>
-
- <p>
- Келип, төрүбүздүн көркүн ачып,
- жакшылыгыбызды бирге бөлүшүп,
- сыйлуу коногубуз болуп
- кетишиңиздерди өтүнөбүз!
- </p>
-</div>
-</div>
-</section>
-
-<div class="divider">✦ ✧ ★ ✧ ✦</div>
-
-<section class="section reveal">
-<h3 class="section-title">Ак тилектер</h3>
-
-<div class="poem">
- Ак дасторкон жайылсын,<br>
- Ак тилектер айтылсын.<br>
- Абдуллахтын тоюна,<br>
- Жакындарым чогулсун.<br><br>
-
- Балапаным чоңойсун,<br>
- Бакыт кушу конойсун.<br>
- Жакшылыктар көп болуп,<br>
- Жүзү дайым жайнасын!
-</div>
-</section>
-
-<div class="divider">★ ✦ ❖ ✦ ★</div>
-
-<section class="section reveal">
-<h3 class="section-title">Той тууралуу маалымат</h3>
-
-<div class="details">
-<div class="ornament">✧ ❖ ✧</div>
-
-<p class="label">ТОЙ БОЛУУЧУ КҮН</p>
-<div class="date">25-ОКТЯБРЬ</div>
-<p>2026-жыл · Жекшемби</p>
-
-<div class="line"></div>
-
-<p class="label">БАШТАЛЫШЫ</p>
-<div class="time">12:00</div>
-
-<div class="line"></div>
-
-<p class="label">ДАРЕГИБИЗ</p>
-<div class="address">
- Бөрөмүков Туйба көчөсү, 65а
-</div>
-
-<div class="ornament">✦ ✧ ✦</div>
-</div>
-</section>
-
-<section class="section reveal">
-<h3 class="section-title">Майрамдык жолугушуу</h3>
-
-<p class="message">
- Бул күнү жакындарыбыз менен
- жолугушуп, жакшы тилектерди
- бөлүшүп, Абдуллахка ак бата беребиз.
-</p>
-
-<div class="events">
-<div class="event">
- <b>🎉 12:00 — Конокторду тосуу</b>
- <p>Кадырлуу конокторубузду жылуу тосуп алабыз.</p>
-</div>
-
-<div class="event">
- <b>✨ Ак баталар</b>
- <p>Абдуллахка жакшы каалоо-тилектер айтылат.</p>
-</div>
-
-<div class="event">
- <b>🎊 Той дасторкону</b>
- <p>Жакшылыгыбызды чогуу бөлүшөбүз.</p>
-</div>
-</div>
-</section>
-
-<footer class="footer reveal">
-<div class="ornament">✦ ★ ✦</div>
-
-<h2>Сиздерди күтөбүз!</h2>
-
-<p class="message">
- Сиздердин келишиңиздер
- биздин кубанычыбызды
- дагы да арттырат!
-</p>
-
-<div class="poem">
- Жакшылыкта жолугушканча!
-</div>
-
-<div class="ornament">✧ ❖ ✧</div>
-</footer>
-
-</main>
 
 <script>
-const music=document.getElementById("music");
-const btn=document.getElementById("musicBtn");
 
-async function toggleMusic(){
- if(music.paused){
-  try{
-   await music.play();
-   btn.textContent="♫ Музыканы токтотуу";
-  }catch(e){
-   alert("Музыка ачылган жок. Файлды текшериңиз.");
+const music = document.getElementById("music");
+
+const musicBtn = document.getElementById("musicBtn");
+
+async function toggleMusic() {
+
+  if (music.paused) {
+
+    try {
+
+      await music.play();
+
+      musicBtn.textContent = "♫ Музыканы токтотуу";
+
+    } catch (error) {
+
+      musicBtn.textContent = "♫ Музыканы күйгүзүү";
+
+      alert("Музыка ачылган жок. Файлдын атын текшериңиз.");
+
+    }
+
+  } else {
+
+    music.pause();
+
+    musicBtn.textContent = "♫ Музыканы күйгүзүү";
+
   }
- }else{
-  music.pause();
-  btn.textContent="♫ Музыканы күйгүзүү";
- }
+
 }
 
-const sections=document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(
 
-if("IntersectionObserver" in window){
- const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-   if(entry.isIntersecting){
-    entry.target.classList.add("show");
-    observer.unobserve(entry.target);
-   }
-  });
- },{threshold:0.1});
+  (entries) => {
 
- sections.forEach(section=>observer.observe(section));
-}else{
- sections.forEach(section=>section.classList.add("show"));
-}
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add("visible");
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+
+  { threshold: 0.1 }
+
+);
+
+document.querySelectorAll(".reveal").forEach(el => {
+
+  observer.observe(el);
+
+});
+
 </script>
 
 </body>
+
 </html>
