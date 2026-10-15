@@ -15,8 +15,15 @@
   --gold: #c99b4d;
   --cream: #fff9eb;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: #cce5fa;
@@ -24,42 +31,61 @@ body {
   font-family: Montserrat, sans-serif;
   text-align: center;
 }
+
 .page {
   max-width: 480px;
-  margin: auto;
-  padding: 20px 16px 40px;
   min-height: 100vh;
+  margin: auto;
+  padding: 24px 16px 45px;
   overflow: hidden;
-  position: relative;
   background:
-    radial-gradient(circle at 15% 12%, #fff9eb 0, transparent 22%),
-    linear-gradient(180deg,#b9ddf7,#f9fcff 30%,#fff8ea 70%,#d5eaf9);
-  border-left: 4px double var(--gold);
-  border-right: 4px double var(--gold);
+    radial-gradient(
+      circle at 15% 12%,
+      #fff9eb,
+      transparent 25%
+    ),
+    linear-gradient(
+      180deg,
+      #b9ddf7,
+      #f9fcff 35%,
+      #fff8ea 70%,
+      #d5eaf9
+    );
+  border-left: 3px solid var(--gold);
+  border-right: 3px solid var(--gold);
 }
-.page::before, .page::after {
-  content: "✦  ✧  ★  ✧  ✦";
-  display: block;
-  color: var(--gold);
-  letter-spacing: 10px;
-  font-size: 17px;
-}
+
 .great {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
 }
+
 .marck {
   font-family: "Marck Script", cursive;
   font-weight: 400;
 }
-.top-title {
-  font-size: 59px;
-  margin: 18px 0 5px;
-  color: var(--blue);
+
+.ornament {
+  width: 75%;
+  height: 2px;
+  margin: 22px auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
 }
+
+.top-title {
+  font-size: 58px;
+  color: var(--blue);
+  margin: 15px 0 10px;
+}
+
 .music-btn {
-  margin: 10px 0 18px;
-  padding: 12px 21px;
+  padding: 12px 22px;
+  margin: 10px 0 20px;
   background: var(--blue);
   color: white;
   border: 2px solid var(--gold);
@@ -68,88 +94,78 @@ body {
   font-weight: 800;
   cursor: pointer;
 }
-.western-decoration {
-  font-size: 28px;
-  margin: 12px 0;
-  letter-spacing: 7px;
-}
+
 .name {
-  font-size: clamp(40px,10vw,51px);
+  font-size: clamp(39px, 10vw, 50px);
   color: var(--blue);
-  margin: 14px 0 0;
+  margin: 20px 0 0;
 }
+
 .event-name {
-  font-size: clamp(48px,12vw,65px);
-  line-height: 1.3;
+  font-size: clamp(48px, 12vw, 64px);
+  line-height: 1.4;
   color: #a87c35;
   margin: 0 0 15px;
 }
-.horse-scene {
-  margin: 8px auto 20px;
-  padding: 10px;
-  border-top: 1px solid var(--gold);
-  border-bottom: 1px solid var(--gold);
-}
-.horse-scene .horse {
-  font-size: 52px;
-  display: inline-block;
-  animation: horseMove 3s ease-in-out infinite;
-}
-.horse-scene .hat { font-size: 34px; }
-@keyframes horseMove {
-  50% { transform: translateY(-7px); }
-}
+
 .photo-frame {
   max-width: 265px;
-  margin: 18px auto 26px;
+  margin: 25px auto;
   padding: 7px;
   background: var(--cream);
   border: 4px solid var(--gold);
   border-radius: 145px 145px 22px 22px;
   box-shadow: 0 10px 24px #174d8329;
 }
+
 .photo-frame img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 135px 135px 15px 15px;
 }
+
 .card {
-  margin: 24px 0;
+  margin: 25px 0;
   padding: 24px 15px;
   background: #fffdf7ed;
   border: 2px solid var(--gold);
   border-radius: 24px;
   box-shadow: 0 8px 20px #10345b12;
 }
+
 .heading {
-  font-size: clamp(43px,11vw,56px);
+  font-size: clamp(43px, 11vw, 56px);
   color: var(--blue);
   margin: 5px 0 18px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
+
 .invite {
-  font-size: clamp(17px,4.4vw,20px);
-  line-height: 1.8;
+  font-size: clamp(17px, 4.4vw, 20px);
+  line-height: 1.85;
   font-weight: 800;
   text-transform: uppercase;
   margin: 0;
 }
+
 .poem {
   padding: 23px 3px;
   margin: 24px 0;
   border-top: 2px solid var(--gold);
   border-bottom: 2px solid var(--gold);
   color: var(--blue);
-  font-size: clamp(29px,7.6vw,39px);
+  font-size: clamp(29px, 7.6vw, 39px);
   line-height: 1.8;
 }
+
 .calendar-title {
-  font-size: clamp(44px,11vw,58px);
+  font-size: clamp(44px, 11vw, 58px);
   color: var(--blue);
-  line-height: 1.3;
+  line-height: 1.4;
   margin: 0 0 10px;
 }
+
 .month {
   font-weight: 900;
   font-size: 19px;
@@ -157,19 +173,22 @@ body {
   color: #a4772f;
   margin-bottom: 18px;
 }
+
 .calendar {
   display: grid;
-  grid-template-columns: repeat(7,minmax(0,1fr));
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 4px;
   max-width: 330px;
   margin: auto;
 }
+
 .weekday {
   font-size: 11px;
   font-weight: 900;
   color: #a4772f;
   padding: 8px 0;
 }
+
 .date {
   min-height: 37px;
   display: flex;
@@ -179,12 +198,14 @@ body {
   font-weight: 700;
   position: relative;
 }
+
 .selected {
   background: var(--blue);
   border: 2px solid var(--gold);
   border-radius: 50%;
   color: white;
 }
+
 .selected::after {
   content: "★";
   color: #e3b251;
@@ -193,32 +214,31 @@ body {
   top: -14px;
   right: -4px;
 }
+
 .date-note {
   font-size: 14px;
   font-weight: 800;
   margin-top: 16px;
 }
-.divider {
-  width: 80%;
-  height: 2px;
-  margin: 25px auto;
-  background: linear-gradient(90deg,transparent,var(--gold),transparent);
-}
+
 .info-title {
   font-size: 42px;
   color: var(--blue);
   margin: 0 0 10px;
 }
+
 .time {
   font-size: 41px;
   font-weight: 900;
   letter-spacing: 4px;
 }
+
 .address {
   font-size: 19px;
   font-weight: 800;
   line-height: 1.6;
 }
+
 .map-btn {
   display: inline-block;
   margin-top: 18px;
@@ -231,76 +251,94 @@ body {
   font-size: 14px;
   font-weight: 800;
 }
+
 .hosts-label {
   font-size: 32px;
   line-height: 1.4;
   color: var(--blue);
   margin: 27px 0 5px;
 }
+
 .hosts {
   font-size: 43px;
   color: #a4772f;
   margin: 5px 0 15px;
 }
-.footer-horse {
-  font-size: 40px;
-  margin: 20px 0;
-}
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity .8s, transform .8s;
 }
+
 .reveal.visible {
   opacity: 1;
   transform: none;
 }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation: none !important;
     transition: none !important;
   }
-  .reveal { opacity: 1; transform: none; }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 </style>
 </head>
 
 <body>
+
 <div class="page">
 
-  <h1 class="top-title great">Чакыруу</h1>
+  <h1 class="top-title great">
+    Чакыруу
+  </h1>
 
-  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
-    ♫ Музыканы күйгүзүү
+  <button
+    class="music-btn"
+    id="musicBtn"
+    onclick="toggleMusic()">
+    Музыканы күйгүзүү
   </button>
 
   <audio id="music" loop preload="none">
     <source src="music.mp3.m4a" type="audio/mp4">
   </audio>
 
-  <div class="western-decoration">🤠 ★ ✦</div>
+  <div class="ornament"></div>
 
-  <h2 class="name marck">Абдуллахтын</h2>
-  <div class="event-name great">Сүннөт тоюна</div>
+  <h2 class="name marck">
+    Абдуллахтын
+  </h2>
 
-  <div class="horse-scene">
-    <span class="hat">🤠</span>
-    <span class="horse">🐎</span>
-    <span class="hat">⭐</span>
+  <div class="event-name great">
+    Сүннөт тоюна
   </div>
 
   <div class="photo-frame reveal">
-    <img src="surot.jpg.PNG" alt="Абдуллахтын сүрөтү">
+    <img
+      src="surot.jpg.PNG"
+      alt="Абдуллахтын сүрөтү">
   </div>
 
   <section class="card reveal">
-    <h2 class="heading great">Урматтуу коноктор!</h2>
+
+    <h2 class="heading great">
+      Урматтуу коноктор!
+    </h2>
+
     <p class="invite">
-      Сиздерди уулубуз Абдуллахтын сүннөт тоюна
-      арналган ак дасторконубуздун кадырлуу коногу
-      болуп, ак батаңызды берип, кубанычыбызга
-      ортоктош болуп кетишиңиздерге чакырабыз!
+      Сиздерди уулубуз Абдуллахтын
+      сүннөт тоюна арналган ак
+      дасторконубуздун кадырлуу
+      коногу болуп, ак батаңызды
+      берип, кубанычыбызга ортоктош
+      болуп кетишиңиздерге чакырабыз!
     </p>
+
   </section>
 
   <div class="poem great reveal">
@@ -310,13 +348,18 @@ body {
     Ак баталар арналсын!
   </div>
 
-  <div class="western-decoration">🐴 ✦ 🤠 ✦ 🐴</div>
-
   <section class="card reveal">
-    <h2 class="calendar-title great">Той болуучу күн</h2>
-    <div class="month">ОКТЯБРЬ 2026</div>
+
+    <h2 class="calendar-title great">
+      Той болуучу күн
+    </h2>
+
+    <div class="month">
+      ОКТЯБРЬ 2026
+    </div>
 
     <div class="calendar">
+
       <div class="weekday">Дш</div>
       <div class="weekday">Шш</div>
       <div class="weekday">Шр</div>
@@ -325,12 +368,15 @@ body {
       <div class="weekday">Иш</div>
       <div class="weekday">Жк</div>
 
-      <div></div><div></div><div></div>
+      <div></div>
+      <div></div>
+      <div></div>
 
       <div class="date">1</div>
       <div class="date">2</div>
       <div class="date">3</div>
       <div class="date">4</div>
+
       <div class="date">5</div>
       <div class="date">6</div>
       <div class="date">7</div>
@@ -338,6 +384,7 @@ body {
       <div class="date">9</div>
       <div class="date">10</div>
       <div class="date">11</div>
+
       <div class="date">12</div>
       <div class="date">13</div>
       <div class="date">14</div>
@@ -345,6 +392,7 @@ body {
       <div class="date">16</div>
       <div class="date">17</div>
       <div class="date">18</div>
+
       <div class="date">19</div>
       <div class="date">20</div>
       <div class="date">21</div>
@@ -352,34 +400,48 @@ body {
       <div class="date">23</div>
       <div class="date selected">24</div>
       <div class="date">25</div>
+
       <div class="date">26</div>
       <div class="date">27</div>
       <div class="date">28</div>
       <div class="date">29</div>
       <div class="date">30</div>
       <div class="date">31</div>
+
     </div>
 
-    <p class="date-note">★ 24-октябрь, ишемби</p>
+    <p class="date-note">
+      ★ 24-октябрь, ишемби
+    </p>
 
-    <div class="divider"></div>
+    <div class="ornament"></div>
 
-    <h3 class="info-title marck">Башталышы</h3>
-    <div class="time">__:__</div>
+    <h3 class="info-title marck">
+      Башталышы
+    </h3>
 
-    <div class="divider"></div>
+    <div class="time">
+      __:__
+    </div>
 
-    <h3 class="info-title marck">Дарегибиз</h3>
+    <div class="ornament"></div>
+
+    <h3 class="info-title marck">
+      Дарегибиз
+    </h3>
+
     <div class="address">
       Боргемиков Туйба көчөсү, 65а
     </div>
 
-    <a class="map-btn"
-       href="https://www.google.com/maps/search/?api=1&amp;query=Боргемиков+Туйба+көчөсү+65а"
-       target="_blank"
-       rel="noopener noreferrer">
-       📍 Картадан көрүү
+    <a
+      class="map-btn"
+      href="https://www.google.com/maps/search/?api=1&amp;query=Боргемиков+Туйба+көчөсү+65а"
+      target="_blank"
+      rel="noopener noreferrer">
+      Картадан көрүү
     </a>
+
   </section>
 
   <div class="hosts-label great reveal">
@@ -390,7 +452,7 @@ body {
     Казыбек &amp; Аселья
   </div>
 
-  <div class="footer-horse">🐎 ⭐ 🤠</div>
+  <div class="ornament"></div>
 
 </div>
 
@@ -402,14 +464,14 @@ async function toggleMusic() {
   if (music.paused) {
     try {
       await music.play();
-      musicBtn.textContent = "♫ Музыканы токтотуу";
+      musicBtn.textContent = "Музыканы токтотуу";
     } catch (error) {
-      musicBtn.textContent = "♫ Музыканы күйгүзүү";
+      musicBtn.textContent = "Музыканы күйгүзүү";
       alert("Музыка ачылган жок. Файлдын атын текшериңиз.");
     }
   } else {
     music.pause();
-    musicBtn.textContent = "♫ Музыканы күйгүзүү";
+    musicBtn.textContent = "Музыканы күйгүзүү";
   }
 }
 
@@ -432,5 +494,6 @@ if ("IntersectionObserver" in window) {
   });
 }
 </script>
+
 </body>
 </html>
